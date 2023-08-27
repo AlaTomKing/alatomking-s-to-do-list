@@ -61,6 +61,8 @@ body {
     /* IE 10 and IE 11 */
     user-select: none;
     /* Standard syntax */
+
+    overflow: hidden;
 }
 
 #titlebar {
@@ -85,6 +87,27 @@ body {
     transition: height 250ms cubic-bezier(0.86, 0, 0.07, 1);
 
     background-color: var(--theme-color-titlebar);
+}
+
+#titlebar button {
+    background-color: var(--theme-color-button);
+
+    height: 30px;
+    font-size: 20px;
+    border: 0px;
+
+    overflow: hidden;
+    border-radius: 5px;
+    white-space: nowrap;
+    color: var(--theme-color-text);
+
+    margin: 0px;
+
+    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+
+    transition: box-shadow 250ms ease-in-out, background-color 100ms ease-in-out;
+    /*box-shadow: 10px 5px 5px red;*/
+    position: relative;
 }
 
 #titlebar text {
@@ -126,7 +149,7 @@ body {
 
 @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
     #titlebar {
-        height: calc(35px + 34px - 5px);
+        height: calc(35px + 34px + 5px);
         bottom: 0px;
 
         justify-content: center;
@@ -136,32 +159,12 @@ body {
 
     #titlebar button {
         width: 100%;
+        height: 40px;
     }
 
     #titlebar text {
         opacity: 0;
     }
-}
-
-#titlebar button {
-    background-color: var(--theme-color-button);
-
-    height: 30px;
-    font-size: 20px;
-    border: 0px;
-
-    overflow: hidden;
-    border-radius: 5px;
-    white-space: nowrap;
-    color: var(--theme-color-text);
-
-    margin: 0px;
-
-    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
-
-    transition: box-shadow 250ms ease-in-out, background-color 100ms ease-in-out;
-    /*box-shadow: 10px 5px 5px red;*/
-    position: relative;
 }
 
 /*#titlebar button::after {
