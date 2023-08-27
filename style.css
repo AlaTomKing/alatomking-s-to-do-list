@@ -54,6 +54,13 @@ body {
     background-color: var(--theme-color-background);
     margin: 0;
     font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 #titlebar {
